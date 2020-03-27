@@ -190,6 +190,19 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/warningcolor',
+    component: Layout,
+    // redirect: '/rolemanagement/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/WarningColor/index'),
+        name: 'WarningColor',
+        meta: { title: '预警颜色', icon: 'guide', noCache: true }
+      }
+    ]
+  },
 
   {
     path: '/login',
